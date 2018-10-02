@@ -5,7 +5,7 @@
   "main": "index.js",
   "husky": {
     "hooks": {
-      "pre-commit": "npm test"
+      "pre-commit": "folder=api npm run headless"
     }
   },
   "scripts": {
