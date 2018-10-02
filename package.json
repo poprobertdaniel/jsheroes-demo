@@ -1,0 +1,24 @@
+{
+  "name": "jsheroes-demo",
+  "version": "1.0.0",
+  "description": "js heroes demo",
+  "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "scripts": {
+    "test": "folder=api ./node_modules/.bin/cypress run -s cypress/integration/$folder/**/**/*",
+    "cypress": "./node_modules/.bin/cypress open",
+    "headless": "./node_modules/.bin/cypress run -s cypress/integration/$folder/**/**/*"
+  },
+  "author": "Robert Pop",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^3.1.0"
+  },
+  "devDependencies": {
+    "husky": "^1.1.0"
+  }
+}
