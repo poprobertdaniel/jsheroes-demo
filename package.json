@@ -3,22 +3,17 @@
   "version": "1.0.0",
   "description": "js heroes demo",
   "main": "index.js",
-  "husky": {
-    "hooks": {
-      "pre-commit": "folder=api npm run headless"
-    }
-  },
   "scripts": {
-    "test": "folder=api ./node_modules/.bin/cypress run -s cypress/integration/$folder/**/**/*",
+    "precommit": "npm test",
+    "test": "./node_modules/.bin/cypress run",
     "cypress": "./node_modules/.bin/cypress open",
     "headless": "./node_modules/.bin/cypress run -s cypress/integration/$folder/**/**/*"
   },
   "author": "Robert Pop",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^3.1.0"
+    "cypress": "^3.1.0",
+    "husky": "^0.14.3"
   },
-  "devDependencies": {
-    "husky": "^1.1.0"
-  }
+  "devDependencies": {}
 }
